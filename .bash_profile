@@ -14,7 +14,7 @@ PS1="\[\033[G\]$PS1"
 
 export EDITOR="vim"
 export SVN_EDITOR="vim"
-export HOMEBREW_TEMP="~/local/tmp"
+export HOMEBREW_TEMP="$HOME/local/tmp"
 export CURRENT_PROJ="uclarify"
 
 alias ls='ls -alF'
