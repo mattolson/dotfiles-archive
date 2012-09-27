@@ -49,17 +49,18 @@ if test -n "$(find $HOME/.amz/$CURRENT_PROJ -maxdepth 1 -name 'cert-*.pem' -prin
 fi
 
 # Additional paths
-function pathadd() {
+function prepend_path() {
   if [ -d "$1" ]; then
     PATH="$1:$PATH"
   fi
 }
-pathadd $ec2_root/bin
-pathadd $HOME/local/personal/bin
-pathadd $HOME/local/personal/sbin
-pathadd $HOME/local/personal/heroku-client
-pathadd /usr/local/bin
-pathadd /usr/local/sbin
+prepend_path $ec2_root/bin
+prepend_path $HOME/local/personal/bin
+prepend_path $HOME/local/personal/sbin
+prepend_path $HOME/local/personal/heroku-client
+prepend_path /usr/local/bin
+prepend_path /usr/local/sbin
 
-# Load RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+# Enable rbenv shims
+eval "$(rbenv init -)"
+

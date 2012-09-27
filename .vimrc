@@ -11,11 +11,18 @@ Bundle 'gmarik/vundle'
 
 " Additional 3rd party plugins
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'Command-T'
 Bundle 'scrooloose/nerdtree.git'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'mileszs/ack.vim'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'matchit.zip'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-bundler'
+Bundle 'groenewege/vim-less'
+Bundle 'tpope/vim-surround'
+Bundle 'msanders/snipmate.vim'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -137,6 +144,7 @@ set smarttab
 " 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2
+set softtabstop=2
 
 " Linebreak on 500 characters
 set lbr
@@ -145,6 +153,16 @@ set tw=500
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
+
+" Toggle invisible characters
+map <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
+
+" Easier identation
+nmap <D-[> <<
+nmap <D-]> >>
+vmap <D-[> <gv
+vmap <D-]> >gv
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -375,5 +393,6 @@ map <leader>nb :NERDTreeFromBookmark
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Powerline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:Powerline_symbols = 'unicode'
+let g:Powerline_symbols = 'fancy'
+
 
