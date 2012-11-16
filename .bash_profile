@@ -15,12 +15,14 @@ PS1="\[\033[G\]$PS1"
 export EDITOR="vim"
 export SVN_EDITOR="vim"
 export HOMEBREW_TEMP="$HOME/local/tmp"
-export CURRENT_PROJ="uclarify"
+export CURRENT_PROJ="greenrose"
+export PROJ_ROOT="$HOME/Documents/development/workspace/$CURRENT_PROJ"
 
 alias ls='ls -alF'
 alias push="git push origin master && git push heroku master"
-function gp() { cd $HOME/Documents/development/workspace/${1:-$CURRENT_PROJ}; }
-function op() { vim $HOME/Documents/development/workspace/${1:-$CURRENT_PROJ}; }
+alias be='bundle exec'
+function gp() { cd $PROJ_ROOT; }
+function op() { vim $PROJ_ROOT; }
 
 # AWS stuff
 ec2_root="$HOME/local/personal/Library/LinkedKegs/ec2-api-tools"
@@ -50,9 +52,7 @@ fi
 
 # Additional paths
 function prepend_path() {
-  if [ -d "$1" ]; then
-    PATH="$1:$PATH"
-  fi
+  PATH="$1:$PATH"
 }
 prepend_path $ec2_root/bin
 prepend_path $HOME/local/personal/bin
@@ -63,4 +63,3 @@ prepend_path /usr/local/sbin
 
 # Enable rbenv shims
 eval "$(rbenv init -)"
-
