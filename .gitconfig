@@ -1,6 +1,6 @@
 [user]
-  name = Matt Olson
-  email = matt@mattolson.com
+	name = Matt Olson
+	email = matt@mattolson.com
 [color]
   branch = auto
   diff = auto

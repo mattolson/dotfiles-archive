@@ -16,11 +16,14 @@ export EDITOR="vim"
 export SVN_EDITOR="vim"
 export HOMEBREW_TEMP="$HOME/local/tmp"
 export CURRENT_PROJ="greenrose"
-export PROJ_ROOT="$HOME/Documents/development/workspace/$CURRENT_PROJ"
+export WORKSPACE="$HOME/Documents/development/workspace"
+export PROJ_ROOT="$WORKSPACE/$CURRENT_PROJ"
 
 alias ls='ls -alF'
 alias push="git push origin master && git push heroku master"
 alias be='bundle exec'
+
+function ws() { cd $WORKSPACE; }
 function gp() { cd $PROJ_ROOT; }
 function op() { vim $PROJ_ROOT; }
 
