@@ -20,8 +20,9 @@ export WORKSPACE="$HOME/Documents/development/workspace"
 export PROJ_ROOT="$WORKSPACE/$CURRENT_PROJ"
 
 alias ls='ls -alF'
-alias push="git push origin master && git push heroku master"
+alias push='git push origin master && git push heroku master'
 alias be='bundle exec'
+alias gpom='git push origin master'
 
 function ws() { cd $WORKSPACE; }
 function gp() { cd $PROJ_ROOT; }
@@ -63,6 +64,10 @@ prepend_path $HOME/local/personal/sbin
 prepend_path $HOME/local/personal/heroku-client
 prepend_path /usr/local/bin
 prepend_path /usr/local/sbin
+prepend_path /usr/local/share/npm/bin
+
+# Node path
+export NODE_PATH="/usr/local/lib/node"
 
 # Enable rbenv shims
 eval "$(rbenv init -)"
