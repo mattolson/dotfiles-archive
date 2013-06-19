@@ -15,7 +15,7 @@ PS1="\[\033[G\]$PS1"
 export EDITOR="vim"
 export SVN_EDITOR="vim"
 export HOMEBREW_TEMP="$HOME/local/tmp"
-export CURRENT_PROJ="greenrose"
+export CURRENT_PROJ="studentstock"
 export WORKSPACE="$HOME/Documents/development/workspace"
 export PROJ_ROOT="$WORKSPACE/$CURRENT_PROJ"
 
@@ -61,7 +61,7 @@ function prepend_path() {
 prepend_path $ec2_root/bin
 prepend_path $HOME/local/personal/bin
 prepend_path $HOME/local/personal/sbin
-prepend_path $HOME/local/personal/heroku-client
+prepend_path $HOME/local/personal/heroku-client/bin
 prepend_path /usr/local/bin
 prepend_path /usr/local/sbin
 prepend_path /usr/local/share/npm/bin
