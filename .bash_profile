@@ -18,11 +18,13 @@ export HOMEBREW_TEMP="$HOME/local/tmp"
 export CURRENT_PROJ="studentstock"
 export WORKSPACE="$HOME/Documents/development/workspace"
 export PROJ_ROOT="$WORKSPACE/$CURRENT_PROJ"
+export GOPATH="$WORKSPACE" # needs to be set for goproj to work
 
 alias ls='ls -alF'
 alias push='git push origin master && git push heroku master'
 alias be='bundle exec'
 alias gpom='git push origin master'
+alias go='goproj-go'
 
 function ws() { cd $WORKSPACE; }
 function gp() { cd $PROJ_ROOT; }
@@ -62,12 +64,16 @@ prepend_path $ec2_root/bin
 prepend_path $HOME/local/personal/bin
 prepend_path $HOME/local/personal/sbin
 prepend_path $HOME/local/personal/heroku-client/bin
+prepend_path $HOME/local/personal/goproj/bin
 prepend_path /usr/local/bin
 prepend_path /usr/local/sbin
 prepend_path /usr/local/share/npm/bin
 
 # Node path
 export NODE_PATH="/usr/local/lib/node"
+
+# Go path
+export GOROOT="$HOME/local/personal/Cellar/go/1.1.2/libexec"
 
 # Enable rbenv shims
 eval "$(rbenv init -)"

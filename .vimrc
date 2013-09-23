@@ -23,6 +23,7 @@ Bundle 'tpope/vim-bundler'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-surround'
 Bundle 'msanders/snipmate.vim'
+Bundle 'jnwhiteh/vim-golang'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -439,6 +440,7 @@ map <leader>t :call WildignoreFromGitignore()<cr>\|:CommandT<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>nt :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark 
+let NERDTreeIgnore = ['\.pyc$']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Powerline
