@@ -1,29 +1,24 @@
-" Vundler pre-reqs
-set nocompatible
-filetype off
+" Init Plug
+call plug#begin('~/.vim/plugged')
 
-" Initialize Vundler
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" 3rd party plugins
+Plug 'bling/vim-airline'
+Plug 'Command-T'
+Plug 'scrooloose/nerdtree'
+Plug 'mileszs/ack.vim'
+Plug 'fatih/vim-go'
+" Plug 'Valloric/YouCompleteMe'
 
-" Add Vundler bundle
-Bundle 'gmarik/vundle'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-ruby/vim-ruby'
+Plug 'matchit.zip'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-bundler'
+Plug 'groenewege/vim-less'
+Plug 'tpope/vim-surround'
+Plug 'msanders/snipmate.vim'
 
-" Additional 3rd party plugins
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'Command-T'
-Bundle 'scrooloose/nerdtree.git'
-Bundle 'tpope/vim-fugitive'
-Bundle 'mileszs/ack.vim'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'matchit.zip'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-bundler'
-Bundle 'groenewege/vim-less'
-Bundle 'tpope/vim-surround'
-Bundle 'msanders/snipmate.vim'
-Bundle 'jnwhiteh/vim-golang'
+call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -443,8 +438,23 @@ map <leader>nb :NERDTreeFromBookmark
 let NERDTreeIgnore = ['\.pyc$']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Powerline
+" Airline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts=1
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-go
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+au FileType go setlocal noexpandtab nosmarttab tabstop=4 shiftwidth=4 softtabstop=4
+au FileType go nmap <Leader>gd <Plug>(go-def-vertical)
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Insertions
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Insert current timestamp
+:nnoremap ts "=strftime("%Y-%m-%d %H:%M:%S")<CR>Po*
