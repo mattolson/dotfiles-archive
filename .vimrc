@@ -3,7 +3,8 @@ call plug#begin('~/.vim/plugged')
 
 " 3rd party plugins
 Plug 'bling/vim-airline'
-Plug 'Command-T'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'wincent/command-t'
 Plug 'scrooloose/nerdtree'
 Plug 'mileszs/ack.vim'
 Plug 'fatih/vim-go'
@@ -11,7 +12,7 @@ Plug 'fatih/vim-go'
 
 Plug 'tpope/vim-fugitive'
 Plug 'vim-ruby/vim-ruby'
-Plug 'matchit.zip'
+Plug 'tmhedberg/matchit'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
 Plug 'groenewege/vim-less'
@@ -99,6 +100,10 @@ set wrapmargin=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if (has("termguicolors"))
+ set termguicolors
+endif
+
 " Enable syntax highlighting
 syntax enable 
 set background=dark
@@ -441,6 +446,7 @@ let NERDTreeIgnore = ['\.pyc$']
 " Airline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline_powerline_fonts=1
+let g:airline_theme='solarized'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-go
