@@ -2,6 +2,7 @@
 call plug#begin('~/.vim/plugged')
 
 " 3rd party plugins
+Plug 'lifepillar/vim-solarized8'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'wincent/command-t'
@@ -107,7 +108,7 @@ endif
 " Enable syntax highlighting
 syntax enable 
 set background=dark
-colorscheme solarized
+colorscheme solarized8
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -445,7 +446,6 @@ let NERDTreeIgnore = ['\.pyc$']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Airline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:airline_powerline_fonts=1
 let g:airline_theme='solarized'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
