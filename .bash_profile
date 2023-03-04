@@ -14,7 +14,7 @@ PS1="\[\033[G\]$PS1"
 
 export EDITOR="vim"
 export SVN_EDITOR="vim"
-export CURRENT_PROJ="rightscenter"
+export CURRENT_PROJ="vault"
 export WORKSPACE="$HOME/Documents/development/workspace"
 export PROJ_ROOT="$WORKSPACE/$CURRENT_PROJ"
 
@@ -48,9 +48,9 @@ prepend_path $HOME/bin
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-nvm use 12
+nvm use 18
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-rvm use 2.6
+rvm use 3.2.0
