@@ -30,7 +30,7 @@ if ! zplug check --verbose; then
 fi
 
 # Then, source plugins and add commands to $PATH
-zplug load --verbose
+zplug load
 
 export EDITOR="vim"
 export CURRENT_PROJ="sync"
