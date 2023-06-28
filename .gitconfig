@@ -1,6 +1,6 @@
 [user]
-	name = Matt Olson
-	email = matt@mattolson.com
+  name = Matt Olson
+  email = matt@mattolson.com
 [color]
   branch = auto
   diff = auto
@@ -28,8 +28,7 @@
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
-
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [github]
-	user = mattolson
+  user = mattolson
