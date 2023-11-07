@@ -32,16 +32,18 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 
-export EDITOR="vim"
-export CURRENT_PROJ="sync"
+export CURRENT_PROJ="ledger"
 export WORKSPACE="$HOME/Documents/workspace"
-export PROJ_ROOT="$WORKSPACE/snowpack/$CURRENT_PROJ"
+export PROJ_ROOT="$WORKSPACE/snowpackmoney/$CURRENT_PROJ"
 
 alias ls='ls -alF'
 alias be='bundle exec'
 
 function ws() { cd $WORKSPACE; }
 function gp() { cd $PROJ_ROOT; }
+
+# Update path to include docker binaries
+export PATH="$HOME/.docker/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
