@@ -38,6 +38,7 @@ export PROJ_ROOT="$WORKSPACE/snowpackmoney/$CURRENT_PROJ"
 
 alias ls='ls -alF'
 alias be='bundle exec'
+alias dc='docker compose'
 
 function ws() { cd $WORKSPACE; }
 function gp() { cd $PROJ_ROOT; }
