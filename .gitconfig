@@ -32,3 +32,5 @@
   helper = osxkeychain
 [github]
   user = mattolson
+[init]
+	defaultBranch = main
