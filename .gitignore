@@ -1,0 +1,18 @@
+# This git repo is just for dot files in the home directory,
+# so let's ignore everything at first, and then add rules
+# to explicitly include the files/directories we care about
+*
+!README
+!.bash_profile
+!.gemrc
+!.gitconfig
+!.gitignore
+!.p10k.zsh
+!.vimrc
+!.vim/autoload/*
+!.prefs/*
+!.prefs/*/*
+!.zpreztorc
+!.zprofile
+!.zshenv
+!.zshrc
