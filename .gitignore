@@ -9,6 +9,8 @@
 !.gitignore
 !.p10k.zsh
 !.vimrc
+!.vim
+!.vim/autoload
 !.vim/autoload/*
 !.prefs
 !.prefs/*

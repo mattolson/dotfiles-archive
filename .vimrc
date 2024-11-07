@@ -1,7 +1,7 @@
-" Init Plug
+" Init vim-plug
 call plug#begin('~/.vim/plugged')
 
-" 3rd party plugins
+" Install 3rd party plugins
 Plug 'lifepillar/vim-solarized8'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -10,7 +10,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'mileszs/ack.vim'
 Plug 'fatih/vim-go'
 " Plug 'Valloric/YouCompleteMe'
-
 Plug 'tpope/vim-fugitive'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tmhedberg/matchit'
@@ -65,17 +64,17 @@ set whichwrap+=<,>,[,]
 " Ignore case when searching
 set ignorecase
 
-" Only ignore case if there are no uppercase characters in the search term 
+" Only ignore case if there are no uppercase characters in the search term
 set smartcase
 
 " Highlight search results, use :noh to turn off highlighting
 set hlsearch
 
 " Update search highlight as you type
-set incsearch 
+set incsearch
 
 " Don't redraw while executing macros (good performance config)
-set lazyredraw 
+set lazyredraw
 
 " For regular expressions turn magic on
 set magic
@@ -106,7 +105,7 @@ if (has("termguicolors"))
 endif
 
 " Enable syntax highlighting
-syntax enable 
+syntax enable
 set background=dark
 colorscheme solarized8
 
@@ -201,8 +200,8 @@ map <leader>ba :1,1000 bd!<cr>
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove 
-map <leader>tl :tabnext<cr> 
+map <leader>tm :tabmove
+map <leader>tl :tabnext<cr>
 map <leader>th :tabprev<cr>
 
 " Opens a new tab with the current buffer's path
@@ -212,7 +211,7 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-" Specify the behavior when switching between buffers 
+" Specify the behavior when switching between buffers
 try
   set switchbuf=useopen,usetab,newtab
   set stal=2
@@ -333,7 +332,7 @@ function! CmdLine(str)
     exe "menu Foo.Bar :" . a:str
     emenu Foo.Bar
     unmenu Foo
-endfunction 
+endfunction
 
 function! VisualSelection(direction, extra_filter) range
     let l:saved_reg = @"
@@ -440,7 +439,7 @@ map <leader>t :call WildignoreFromGitignore()<cr>\|:CommandT<cr>
 " NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>nt :NERDTreeToggle<cr>
-map <leader>nb :NERDTreeFromBookmark 
+map <leader>nb :NERDTreeFromBookmark
 let NERDTreeIgnore = ['\.pyc$']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
