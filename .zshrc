@@ -55,3 +55,8 @@ if [ -f '/Users/matt/dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/
 # Init pyenv
 eval "$(pyenv init - zsh)"
 
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/matt/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
