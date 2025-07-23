@@ -17,6 +17,7 @@ path=(
   $HOME/.pyenv/bin
   $HOME/.local/{,s}bin(N)
   /usr/local/{,s}bin(N)
+  /opt/homebrew/opt/postgresql@17/bin
   $path
 )
 
