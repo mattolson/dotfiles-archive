@@ -32,9 +32,9 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 
-export CURRENT_PROJ="ledger"
+export CURRENT_PROJ="agent-sandbox"
 export WORKSPACE="$HOME/dev/workspace"
-export PROJ_ROOT="$WORKSPACE/snowpackmoney/$CURRENT_PROJ"
+export PROJ_ROOT="$WORKSPACE/$CURRENT_PROJ"
 
 alias ls='ls -alF'
 alias be='bundle exec'
