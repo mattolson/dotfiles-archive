@@ -4,6 +4,8 @@
 *
 !README
 !.bash_profile
+!.claude
+!.claude/*
 !.gemrc
 !.gitconfig
 !.gitignore
