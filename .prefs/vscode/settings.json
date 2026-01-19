@@ -1,0 +1,17 @@
+{
+  "git.openRepositoryInParentFolders": "always",
+  "[ruby]": {
+    "editor.tabSize": 2,
+  },
+  "[javascript]": {
+    "editor.tabSize": 2,
+  },
+  "explorer.confirmDragAndDrop": false,
+  "workbench.startupEditor": "none",
+  "redhat.telemetry.enabled": false,
+  "editor.accessibilitySupport": "off",
+  "claudeCode.preferredLocation": "panel",
+  "terminal.integrated.initialHint": false,
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.trimTrailingWhitespace": true,
+}
