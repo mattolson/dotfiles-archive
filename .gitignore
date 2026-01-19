@@ -5,7 +5,8 @@
 !README
 !.bash_profile
 !.claude
-!.claude/*
+!.claude/CLAUDE.md
+!.claude/settings.json
 !.gemrc
 !.gitconfig
 !.gitignore
