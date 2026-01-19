@@ -34,7 +34,7 @@ zplug load
 
 export CURRENT_PROJ="agent-sandbox"
 export WORKSPACE="$HOME/dev/workspace"
-export PROJ_ROOT="$WORKSPACE/$CURRENT_PROJ"
+export PROJ_ROOT="$WORKSPACE/mattolson/$CURRENT_PROJ"
 
 alias ls='ls -alF'
 alias be='bundle exec'
@@ -55,9 +55,5 @@ if [ -f '/Users/matt/dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/
 # Init pyenv
 eval "$(pyenv init - zsh)"
 
-# The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/matt/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
-# End of Docker CLI completions
+# Mise
 eval "$(~/.local/bin/mise activate zsh)"
