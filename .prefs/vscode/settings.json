@@ -13,5 +13,4 @@
   "claudeCode.preferredLocation": "panel",
   "terminal.integrated.initialHint": false,
   "terminal.integrated.copyOnSelection": true,
-  "terminal.integrated.trimTrailingWhitespace": true,
 }
