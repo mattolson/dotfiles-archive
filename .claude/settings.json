@@ -1,6 +1,6 @@
 {
   "includeCoAuthoredBy": false,
-  "model": "claude-opus-4-5-20251101[1m]",
+  "model": "claude-opus-4-5-20251101",
   "alwaysThinkingEnabled": true,
   "permissions": {
     "allow": [
